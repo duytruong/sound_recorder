@@ -1,8 +1,8 @@
 name: audio_recorder2
 description: audio recorder plug-in
 version: 0.0.1
-author:
-homepage:
+author: apurv2017
+homepage: https://github.com/Apurv2017/audioRecorder2
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
