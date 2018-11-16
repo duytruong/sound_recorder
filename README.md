@@ -10,18 +10,18 @@ This is fork of audio_recorder by ZaraclaJ, please refer https://github.com/Zara
 
 ```
 // Import package
-import 'package:audio_recorder/audio_recorder.dart';
+import 'package:audio_recorder2/audio_recorder2.dart';
 
 // Check permissions before starting
-bool hasPermissions = await AudioRecorder.hasPermissions;
+bool hasPermissions = await AudioRecorder2.hasPermissions;
 
 // Get the state of the recorder
-bool isRecording = await AudioRecorder.isRecording;
+bool isRecording = await AudioRecorder2.isRecording;
 
 // Start recording
-await AudioRecorder.start(path: _controller.text, audioOutputFormat: AudioOutputFormat.AAC);
+await AudioRecorder2.start(path: _controller.text, audioOutputFormat: AudioOutputFormat.AAC);
 
 // Stop recording
-Recording recording = await AudioRecorder.stop();
+Recording recording = await AudioRecorder2.stop();
 print("Path : ${recording.path},  Format : ${recording.audioOutputFormat},  Duration : ${recording.duration},  Extension : ${recording.extension},");
 ```
