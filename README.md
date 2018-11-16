@@ -8,6 +8,7 @@ This is fork of audio_recorder by ZaraclaJ, please refer https://github.com/Zara
 
 ## Usage
 
+```
 // Import package
 import 'package:audio_recorder/audio_recorder.dart';
 
@@ -23,3 +24,4 @@ await AudioRecorder.start(path: _controller.text, audioOutputFormat: AudioOutput
 // Stop recording
 Recording recording = await AudioRecorder.stop();
 print("Path : ${recording.path},  Format : ${recording.audioOutputFormat},  Duration : ${recording.duration},  Extension : ${recording.extension},");
+```
