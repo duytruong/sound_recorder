@@ -1,4 +1,4 @@
-package audiorecorder2.audiorecorder2;
+package com.duytruong.soundrecorder;
 
 import android.Manifest;
 import android.content.Context;
@@ -21,7 +21,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 /**
  * AudioRecorderPlugin2
  */
-public class AudioRecorder2Plugin implements MethodCallHandler {
+public class SoundRecorderPlugin implements MethodCallHandler {
   private final Registrar registrar;
   private boolean isRecording = false;
   private static final String LOG_TAG = "AudioRecorder";
@@ -33,11 +33,11 @@ public class AudioRecorder2Plugin implements MethodCallHandler {
    * Plugin registration.
    */
   public static void registerWith(Registrar registrar) {
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "audio_recorder");
-    channel.setMethodCallHandler(new AudioRecorder2Plugin(registrar));
+    final MethodChannel channel = new MethodChannel(registrar.messenger(), "sound_recorder");
+    channel.setMethodCallHandler(new SoundRecorderPlugin(registrar));
   }
 
-  private AudioRecorder2Plugin(Registrar registrar){
+  private SoundRecorderPlugin(Registrar registrar){
     this.registrar = registrar;
   }
 

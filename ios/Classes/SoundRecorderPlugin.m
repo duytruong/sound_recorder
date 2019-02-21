@@ -1,8 +1,8 @@
-#import "AudioRecorder2Plugin.h"
+#import "SoundRecorderPlugin.h"
 #import <audio_recorder2/audio_recorder2-Swift.h>
 
-@implementation AudioRecorder2Plugin
+@implementation SoundRecorderPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftAudioRecorder2Plugin registerWithRegistrar:registrar];
+  [SwiftSoundRecorderPlugin registerWithRegistrar:registrar];
 }
 @end

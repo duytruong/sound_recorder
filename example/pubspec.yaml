@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  audio_recorder2:
+  sound_recorder:
     path: ../
 
 # For information on the generic Dart part of this file, see the

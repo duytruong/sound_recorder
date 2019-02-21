@@ -1,8 +1,8 @@
-name: audio_recorder2
-description: audio recorder plug-in
-version: 1.0.2
-author: apurv2017
-homepage: https://github.com/Apurv2017/audioRecorder2
+name: sound_recorder
+description: Just another Flutter sound recording plugin
+version: 0.1.0
+author: duytruong
+homepage: https://github.com/duytruong/sound_recorder
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -20,8 +20,8 @@ dependencies:
 # The following section is specific to Flutter.
 flutter:
   plugin:
-    androidPackage: audiorecorder2.audiorecorder2
-    pluginClass: AudioRecorder2Plugin
+    androidPackage: com.duytruong.soundrecorder
+    pluginClass: SoundRecorderPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

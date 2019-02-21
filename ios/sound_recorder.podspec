@@ -2,11 +2,11 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'audio_recorder2'
-  s.version          = '0.0.1'
-  s.summary          = 'audio recorder plug-in'
+  s.name             = 'sound_recorder'
+  s.version          = '0.1.0'
+  s.summary          = 'sound recorder plug-in'
   s.description      = <<-DESC
-audio recorder plug-in
+sound recorder plug-in
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }

@@ -1,5 +1,5 @@
-group 'audiorecorder2.audiorecorder2'
-version '1.0-SNAPSHOT'
+group 'com.duytruong.soundrecorder'
+version '0.1.0'
 
 buildscript {
     repositories {

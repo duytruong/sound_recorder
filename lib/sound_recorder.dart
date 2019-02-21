@@ -5,8 +5,8 @@ import 'package:file/local.dart';
 import 'package:flutter/services.dart';
 import 'package:path/path.dart' as p;
 
-class AudioRecorder2 {
-  static const MethodChannel _channel = const MethodChannel('audio_recorder');
+class SoundRecorder {
+  static const MethodChannel _channel = const MethodChannel('sound_recorder');
 
   /// use [LocalFileSystem] to permit widget testing
   static LocalFileSystem fs = LocalFileSystem();

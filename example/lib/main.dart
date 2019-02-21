@@ -6,7 +6,7 @@ import 'package:file/local.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:audio_recorder2/audio_recorder2.dart';
+import 'package:sound_recorder/sound_recorder.dart';
 
 void main() => runApp(new MyApp());
 
@@ -81,7 +81,7 @@ class AppBodyState extends State<AppBody> {
 
   _start() async {
     try {
-      if (await AudioRecorder2.hasPermissions) {
+      if (await SoundRecorder.hasPermissions) {
         if (_controller.text != null && _controller.text != "") {
           String path = _controller.text;
           if (!_controller.text.contains('/')) {
@@ -90,12 +90,12 @@ class AppBodyState extends State<AppBody> {
             path = appDocDirectory.path + '/' + _controller.text;
           }
           print("Start recording: $path");
-          await AudioRecorder2.start(
+          await SoundRecorder.start(
               path: path, audioOutputFormat: AudioOutputFormat.AAC);
         } else {
-          await AudioRecorder2.start();
+          await SoundRecorder.start();
         }
-        bool isRecording = await AudioRecorder2.isRecording;
+        bool isRecording = await SoundRecorder.isRecording;
         setState(() {
           _recording = new Recording(duration: new Duration(), path: "");
           _isRecording = isRecording;
@@ -110,9 +110,9 @@ class AppBodyState extends State<AppBody> {
   }
 
   _stop() async {
-    var recording = await AudioRecorder2.stop();
+    var recording = await SoundRecorder.stop();
     print("Stop recording: ${recording.path}");
-    bool isRecording = await AudioRecorder2.isRecording;
+    bool isRecording = await SoundRecorder.isRecording;
     File file = widget.localFileSystem.file(recording.path);
     print("  File length: ${await file.length()}");
     setState(() {
