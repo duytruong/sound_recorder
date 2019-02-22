@@ -18,9 +18,6 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/**
- * AudioRecorderPlugin2
- */
 public class SoundRecorderPlugin implements MethodCallHandler {
   private final Registrar registrar;
   private boolean isRecording = false;
@@ -96,7 +93,7 @@ public class SoundRecorderPlugin implements MethodCallHandler {
     mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
     mRecorder.setOutputFormat(getOutputFormatFromString(mExtension));
     mRecorder.setOutputFile(mFilePath);
-    mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+    mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_WB);
 
     try {
       mRecorder.prepare();
@@ -122,6 +119,8 @@ public class SoundRecorderPlugin implements MethodCallHandler {
       case ".aac":
       case ".m4a":
         return MediaRecorder.OutputFormat.MPEG_4;
+      case ".awb":
+        return MediaRecorder.OutputFormat.AMR_WB;
       default:
         return MediaRecorder.OutputFormat.MPEG_4;
     }

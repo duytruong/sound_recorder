@@ -1,3 +1,3 @@
 ## 0.1.0
 
-* TODO: Describe initial release.
+* Support AMR_WB output format.

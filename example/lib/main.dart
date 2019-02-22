@@ -91,7 +91,7 @@ class AppBodyState extends State<AppBody> {
           }
           print("Start recording: $path");
           await SoundRecorder.start(
-              path: path, audioOutputFormat: AudioOutputFormat.AAC);
+              path: path, audioOutputFormat: AudioOutputFormat.AMR_WB);
         } else {
           await SoundRecorder.start();
         }

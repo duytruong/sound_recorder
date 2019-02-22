@@ -72,6 +72,8 @@ class SoundRecorder {
       case ".aac":
       case ".m4a":
         return AudioOutputFormat.AAC;
+      case ".awb":
+        return AudioOutputFormat.AMR_WB;
       default:
         return null;
     }
@@ -82,6 +84,7 @@ class SoundRecorder {
       case ".mp4":
       case ".aac":
       case ".m4a":
+      case ".awb":
         return true;
       default:
         return false;
@@ -93,6 +96,8 @@ class SoundRecorder {
     switch (outputFormat) {
       case AudioOutputFormat.AAC:
         return ".m4a";
+      case AudioOutputFormat.AMR_WB:
+        return ".awb";
       default:
         return ".m4a";
     }
@@ -101,6 +106,7 @@ class SoundRecorder {
 
 enum AudioOutputFormat {
   AAC,
+  AMR_WB
 }
 
 class Recording {
