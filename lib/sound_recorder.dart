@@ -16,15 +16,15 @@ class SoundRecorder {
     String extension;
     if (path != null) {
       if (audioOutputFormat != null) {
-        if (_convertStringInAudioOutputFormat(p.extension(path)) !=
+        if (convertStringToAudioOutputFormat(p.extension(path)) !=
             audioOutputFormat) {
-          extension = _convertAudioOutputFormatInString(audioOutputFormat);
+          extension = convertAudioOutputFormatToString(audioOutputFormat);
           path += extension;
         } else {
           extension = p.extension(path);
         }
       } else {
-        if (_isAudioOutputFormat(p.extension(path))) {
+        if (isAudioOutputFormat(p.extension(path))) {
           extension = p.extension(path);
         } else {
           extension = ".m4a"; // default value
@@ -51,7 +51,7 @@ class SoundRecorder {
         duration: new Duration(milliseconds: response['duration']),
         path: response['path'],
         audioOutputFormat:
-        _convertStringInAudioOutputFormat(response['audioOutputFormat']),
+        convertStringToAudioOutputFormat(response['audioOutputFormat']),
         extension: response['audioOutputFormat']);
     return recording;
   }
@@ -66,7 +66,7 @@ class SoundRecorder {
     return hasPermission;
   }
 
-  static AudioOutputFormat _convertStringInAudioOutputFormat(String extension) {
+  static AudioOutputFormat convertStringToAudioOutputFormat(String extension) {
     switch (extension) {
       case ".mp4":
       case ".aac":
@@ -79,7 +79,7 @@ class SoundRecorder {
     }
   }
 
-  static bool _isAudioOutputFormat(String extension) {
+  static bool isAudioOutputFormat(String extension) {
     switch (extension) {
       case ".mp4":
       case ".aac":
@@ -91,7 +91,7 @@ class SoundRecorder {
     }
   }
 
-  static String _convertAudioOutputFormatInString(
+  static String convertAudioOutputFormatToString(
       AudioOutputFormat outputFormat) {
     switch (outputFormat) {
       case AudioOutputFormat.AAC:
