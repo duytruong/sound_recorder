@@ -5,6 +5,7 @@ Pod::Spec.new do |s|
   s.name             = 'sound_recorder'
   s.version          = '0.1.0'
   s.summary          = 'sound recorder plug-in'
+  s.swift_version = '4.2'
   s.description      = <<-DESC
 sound recorder plug-in
                        DESC
